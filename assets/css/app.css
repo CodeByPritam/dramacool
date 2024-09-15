@@ -1,0 +1,1143 @@
+/* ============================================================ */
+/* ============================================================ */
+/* =================== DramaCool : Body ======================= */
+/* ============================================================ */
+/* ============================================================ */
+section#dramacoolBody {
+    margin-top: 155px;
+}
+
+/* ========================== */
+/* ===== Swiper : Begin ===== */
+/* ========================== */
+#carousel {
+    margin-bottom: 10px;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+/* === Single Slide === */
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a.slide-cover {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+.slide-cover::before {
+    content: "";
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    opacity: 0.2;
+    bottom: 0;
+    background: linear-gradient(90deg, #202125 0, rgba(32, 33, 37, .6) 40%, rgba(32, 33, 37, 0) 60%, rgba(32, 33, 37, 0) 80%, #202125 100%);
+}
+
+a.slide-cover img.slide-thumbnail {
+    object-fit: cover;
+    vertical-align: middle;
+}
+
+/* === Pagination === */
+.bullet-pagination{
+    position: absolute;
+    z-index: 9;
+    bottom: 16px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+span.swiper-pagination-bullet {
+    height: 9.5px !important;
+    width: 9.5px !important;
+    background: var(--white-color) !important;
+    opacity: 1;
+    margin: 0 5px !important;
+}
+
+span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background: var(--app-secondary-color) !important;
+    height: 9.5px !important;
+    width: 9.5px !important;
+}
+
+/* === AutoPlay === */
+.autoplay-progress {
+    position: absolute;
+    right: 16px;
+    top: 14px;
+    z-index: 10;
+    width: 16px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.autoplay-progress svg {
+    --progress: 0;
+    position: absolute;
+    left: 0;
+    top: 0px;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    stroke-width: 10px;
+    stroke: #dbdbdb;
+    fill: none;
+    stroke-dashoffset: calc(125.6 * (1 - var(--progress)));
+    stroke-dasharray: 125.6;
+    transform: rotate(-90deg);
+}
+
+/* ======================== */
+/* ===== Swiper : End ===== */
+/* ======================== */
+
+/* ================================= */
+/* ===== DramaCoolBody : Begin ===== */
+/* ================================= */
+.container-spliter {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/* === Main === */
+main#homepage, main#watchpage, main#showdetails,
+main#castpage, main#news, main#dramacool {
+    width: 75%;
+}
+
+/* === Tab Switchs === */
+.homeContent-tabSwitchs {
+    align-items: center;
+    column-gap: 5px;
+    margin-bottom: 5px;
+}
+
+.label-box {
+    display: flex;
+    border: none;
+    flex-direction: row;
+}
+
+h2.tab-title {
+    color: var(--white-color);
+    padding: 6px 10px;
+    background: var(--app-primary-color);
+    font-weight: 500;
+    font-family: 'Sora';
+    font-size: 12px;
+    cursor: pointer;
+    border-radius: 2px;
+}
+
+.activetab-switch {
+    background: var(--app-secondary-color) !important;
+}
+
+/* === RAD === */
+.primary-container {
+    background: var(--white-color);
+    border: 1px solid #e7e7e7;
+    padding: 10px 10px;
+}
+
+.post-listing {
+    grid-gap: 10px 10px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+/* === Content Tab === */
+#recently_added_movie,
+#recently_added_kshow {
+    display: none;
+}
+
+/* === Recently Addad Post === */
+li#post-rad, 
+li#post-ram, 
+li#post-kshow {
+    overflow: hidden;
+    position: relative;
+    border-top: 2px solid var(--app-third-color);
+}
+
+img.rad-thumbnail, 
+img.ram-thumbnail, 
+img.kshow-thumbnail {
+    height: 165px;
+    display: flex;
+    width: 100%;
+    object-fit: cover;
+    opacity: 0.95;
+}
+
+li#post-rad:hover img.rad-thumbnail, 
+li#post-ram:hover img.ram-thumbnail, 
+li#post-kshow:hover img.kshow-thumbnail {
+    transform: scale(1.2) !important;
+    transition: all 0.3s ease-in-out !important;
+}
+
+li#post-rad:hover span.season-ep, 
+li#post-ram:hover span.season-ep, 
+li#post-kshow:hover span.season-ep {
+    background: var(--app-secondary-color) !important;
+    transition: all 0.3s ease !important;
+}
+
+.rad-meta, 
+.ram-meta, 
+.kshow-meta {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 8px 10px;
+    height: 70px;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+h2.rad-title, 
+h2.ram-title, 
+h2.kshow-title {
+    font-size: 14px;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: var(--white-color);
+    font-weight: 400;
+    line-height: 0.98rem;
+}
+
+span.time {
+    color: #d1d1d1;
+    font-weight: 500;
+    font-size: 12px;
+    bottom: 8px;
+    position: absolute;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+span.season-ep {
+    position: absolute;
+    background: var(--app-primary-color);
+    display: flex;
+    align-items: center;
+    padding: 4px 15px 4px 5px;
+    top: 28px;
+    color: var(--white-color);
+    font-size: 12px;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+    right: -5px;
+}
+
+/* === Pegination === */
+.pagination-tool {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 16px 0 0 0;
+}
+
+.pagination-tool li {
+    display: flex;
+    border: 1px solid #e7e7e7;
+    align-items: center;
+}
+
+.pagination-tool li:hover, .pagination-tool li:hover a {
+    background: var(--app-primary-color);
+    color: var(--white-color);
+    transition: all 0.2s ease-in-out;
+}
+
+.pagination-tool li a {
+    padding: 8px 12px;
+    color: var(--app-primary-color);
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+}
+
+li.selected, li.selected a {
+    background: var(--app-primary-color);
+    color: var(--white-color);
+}
+
+/* === Show More === */
+.showmore {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+#sm-drama, #sm-movie, #sm-kshow {
+    padding: 10px 0 0 0;
+}
+
+.showmore a {
+    color: var(--app-third-color);
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+}
+
+/* === Not FoundAlert === */
+.notfound-alert {
+    margin-top: 10px; /* Remove While Writing backend */
+    background: #d6f6ff;
+    border-color: #BFE3EC;
+    padding: 28px 24px;
+}
+
+.notfound-text {
+    color: #005770;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    column-gap: 16px;
+    text-shadow: 0 1px 1px #ffffff;
+}
+
+i.fa-solid.fa-circle-info {
+    font-size: 22px;
+    color: #2CB4DA;
+}
+
+/* === label === */
+.label-setting {
+    margin: 10px 0 5px 0;
+}
+
+h2.label-title {
+    color: var(--white-color);
+    padding: 6px 10px;
+    background: var(--app-secondary-color);
+    font-weight: 500;
+    font-family: 'Sora';
+    font-size: 12px;
+    border-radius: 2px;
+}
+
+/* === MP === */
+.mp-listing {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 6px;
+}
+
+li.post-mp {
+    list-style: none;
+    list-style-type: none;
+    width: calc(32% - 10px);
+    display: inline-block;
+}
+
+h3.mostpopular-title {
+    font-size: 13px;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h3.mostpopular-title a {
+    color: var(--app-third-color);
+}
+
+h3.mostpopular-title a:hover {
+    color: var(--app-secondary-color);
+    transition: all 0.2s ease-in-out;
+}
+
+/* ================ */
+/* === HomePage === */
+/* ================ */
+aside#aside {
+    width: 24%;
+    height: 100%;
+}
+
+/* === Aside Switch === */
+.asidetab-switch {
+    align-items: center;
+    column-gap: 5px;
+    margin-bottom: 5px;
+}
+
+h2.tab-title.activetab-aside {
+    background: var(--app-secondary-color) !important;
+}
+
+h2#btn-ongoing {
+    padding: 5px 9px 5px 3px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+i.fas.fa-aside.fa-heart {
+    color: var(--white-color);
+    margin-left: 6px;
+    padding-right: 6px;
+    font-size: 13px;
+    text-shadow: none !important;
+}
+
+/* === Aside === */
+.aside-tabs {
+    background: var(--white-color);
+    border: 1px solid #e7e7e7;
+    padding: 10px 10px;
+}
+
+/* === Ads, Upcoming === */
+#upcoming_shows,
+#ads {
+    display: none;
+}
+
+/* === Ongoing, Upcoming Listing === */
+.ongoing-listing,
+.upcoming-listing {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+    margin-bottom: 15px;
+}
+
+li.post-ongoing,
+li.post-upcoming {
+    list-style: none;
+}
+
+li.post-upcoming {
+    display: flex;
+    flex-direction: column;
+    row-gap: 3px;
+    border-bottom: 2px solid #e7e7e7;
+    padding: 0 0 4px 0;
+}
+
+h3.ongoing-title,
+h3.upcoming-title {
+    font-weight: 500;
+    font-size: 13px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h3.ongoing-title a,
+h3.upcoming-title {
+    color: var(--app-third-color);
+}
+
+li.post-upcoming:hover > h3.upcoming-title {
+    color: var(--app-secondary-color);
+    transition: all 0.2s ease-in-out;
+}
+
+h3.ongoing-title a:hover {
+    color: var(--app-secondary-color);
+    transition: all 0.2s ease;
+}
+
+.airing-date {
+    font-family: 'Karla';
+    font-size: 14px;
+    font-weight: 500;
+    color: #bfbfbf;
+}
+
+/* === Ads === */
+.notice {
+    font-family: 'Karla';
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--app-third-color);
+}
+
+/* === Genre, Archive === */
+.genre-listing, .archive-listing {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+}
+
+li.genre-li a, 
+li.archive-li a {
+    color: var(--app-third-color);
+    font-weight: 500;
+    font-size: 13px;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: row;
+    column-gap: 6px;
+    align-items: center;
+}
+
+li.genre-li a:hover , 
+li.genre-li a:hover > i.fas.fa-aside-genre.fa-angle-right {
+    color: var(--app-secondary-color);
+    transition: all 0.2s ease-in-out;
+}
+
+li.archive-li a:hover, 
+li.archive-li a:hover > i.fas.fa-aside-archive.fa-angle-right {
+    color: var(--app-secondary-color);
+    transition: all 0.2s ease;
+}
+
+i.fas.fa-aside-genre.fa-angle-right, 
+i.fas.fa-aside-archive.fa-angle-right {
+    font-size: 13px;
+    color: #8d8c8c;
+}
+
+/* ================================= */
+/* ====== DramaCoolBody : End ====== */
+/* ================================= */
+
+/* =============================== */
+/* ====== Viewdrama : Begin ====== */
+/* ================== ============ */
+.normal-label {
+    margin: 0 0 5px 0;
+}
+
+/* === Container === */
+.container-watch {
+    background: var(--white-color);
+    border: 1px solid #e7e7e7;
+    padding: 10px 10px;
+}
+
+/* == Light === */
+#light {
+    position: fixed;
+    opacity: 0.98;
+    display: none;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: rgb(0 0 0 / 94%);
+}
+
+/* === Article Meta === */
+.vw-meta {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #cfcfcf;
+}
+
+h1.vw-title {
+    width: 60%;
+    font-family: 'Poppins';
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--app-secondary-color);
+}
+
+.submeta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+span.submeta-category {
+    font-weight: 600;
+    font-size: 13px;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--black-color);
+    margin-right: 6px;
+}
+
+.submeta a {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    color: var(--app-third-color);
+    font-weight: 600;
+}
+
+.submeta a:hover {
+    color: var(--app-secondary-color);
+    transition: all 0.2s ease-in-out;
+}
+
+/* === Artic;e Description === */
+p.vw-description {
+    font-size: 14px;
+    margin-top: 10px;
+    font-family: 'Sora', sans-serif;
+    line-height: 1.2rem;
+    color: rgb(79, 76, 76);
+    font-weight: 400;
+}
+
+p.vw-description strong {
+    color: var(--app-third-color);
+    font-weight: 600;
+}
+
+/* === Video Player === */
+.video-player {
+    background: var(--black-color);
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    position: relative;
+    margin-top: 12px;
+    min-height: 260px;
+    display: flex;
+    border-radius: 4px;
+}
+
+/* ===================== */
+/* === Player Plugin === */
+/* ===================== */
+.player-plugin {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* === Operation === */
+#operations {
+    display: flex;
+    column-gap: 2px;
+    align-items: center;
+}
+
+button.operation-Btn {
+    padding: 6px 10px;
+    background: var(--app-primary-color);
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.operation-Btn.caution {
+    background: rgb(250, 26, 75) !important;
+}
+
+.operation-Btn.lightBtn {
+    background: #ffaf38 !important;
+}
+
+button.operation-Btn:hover > a {
+    text-shadow: 0 2px #000;
+    transition: all 0.2ms ease-in-out;
+}
+
+button.operation-Btn a {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    color: var(--white-color);
+    font-weight: 500;
+    font-family: 'Sora', serif;
+    font-size: 12px;
+}
+
+button.operation-Btn a p {
+    position: relative;
+    bottom: 1px;
+}
+
+i.fas.fa-flag {
+    font-size: 12px;
+    padding-left: 6px;
+    color: var(--white-color);
+}
+
+i.fas.fa-moon,
+i.fas.fa-lightbulb {
+    font-size: 14px;
+    padding-left: 6px;
+    color: var(--white-color);
+}
+
+button.operation-Btn a p.downloadLink {
+    position: relative;
+    bottom: 0px;
+}
+
+i.fas.fa-download {
+    font-size: 12px;
+    padding-left: 6px;
+    color: var(--white-color);
+}
+
+/* === Episode Changer === */
+#episode-changer {
+    display: flex;
+    flex-direction: row;
+    column-gap: 2px;
+}
+
+button.episode-previous, 
+button.episode-next {
+    outline: none;
+    border: none;
+    background: var(--app-third-color);
+}
+
+button.episode-previous {
+    padding: 6px 10px 6px 6px;
+}
+
+button.episode-next {
+    padding: 6px 6px 6px 10px;
+}
+
+a.perv-link, 
+a.next-link {
+    text-shadow:  0 2px #000;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    color: var(--white-color);
+    font-family: 'Sora';
+    font-size: 12px;
+    font-weight: 500;
+}
+
+i.bx.bx-chevron-left,
+i.bx.bx-chevron-right {
+    font-size: 18px;
+    color: var(--white-color);
+}
+
+/* === Episode Select === */
+select#select-episode {
+    text-shadow: 0 2px #000;
+    border: none;
+    outline: none;
+    background: var(--app-third-color);
+    color:var(--white-color);
+    padding: 0px 4px 0px 4px;
+    font-family: 'Sora';
+    font-size: 12px;
+    font-weight: 500;
+}
+
+option.episode-li {
+    background: var(--app-primary-color);
+}
+
+/* === Player Box-Notice === */
+.pbox-notice {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+}
+
+li.note-li {
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+    font-weight: 400 !important;
+    font-size: 14px;
+    font-family: 'Sora', serif;
+    color: #4f4c4c;
+}
+
+li.note-li span {
+    font-family: "Bree Serif", serif;
+    font-size: 16px;
+}
+
+li.note-li p {
+    line-height: 1.2rem;
+}
+
+li.note-li p a {
+    color: var(--app-third-color);
+    font-weight: 500;
+}
+
+/* =========================== */
+/* ===== Related Episode ===== */
+/* =========================== */
+.repi-listing {
+    display: flex;
+    row-gap: 4px;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+/* === li Post === */
+li.repi {
+    position: relative;
+}
+
+li.repi:nth-child(even) {
+    background: #EDEDED;
+}
+
+li.repi:nth-child(odd) {
+    background: #e6e6e6;
+}
+
+li.repi a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.repi-title {
+    display: flex;
+    align-items: center;
+}
+
+.repi-title h3 {
+    font-size: 13px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    margin-left: 10px;
+    color: var(--app-third-color);
+}
+
+.repi-title h3:hover {
+    color: var(--app-secondary-color);
+    transition: all 0.2s ease-in-out;
+}
+
+span.sub-subbed, span.raw{
+    padding: 8px 16px;
+    background: var(--app-third-color);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--white-color);
+}
+
+span.raw {
+    background: var(--app-secondary-color);
+    padding: 8px 14px;
+}
+
+span.time-uploaded {
+    color: #afadad;
+    font-weight: 400;
+    font-size: 12px;
+    font-family: 'Sora', sans-serif;
+    cursor: default;
+    padding-right: 10px;
+}
+
+/* ============================== */
+/* ====== Viewdrama : End ====== */
+/* ================== =========== */
+
+/* ================================ */
+/* ====== Viewdetails : End ====== */
+/* ================== ============= */
+
+/* === Title === */
+h1.showname {
+    font-family: 'Bree Serif', serif;
+    font-size: 28px;
+    line-height: 2rem;
+    margin-bottom: 10px;
+    color: var(--black-color);
+    font-weight: 500;
+    border-bottom: 2px solid #e7e7e7;
+    padding-bottom: 10px;
+}
+
+/* === Detail Container === */
+.details-container {
+    display: flex;
+    column-gap: 20px;
+    position: relative;
+}
+
+.sd-thumbnail {
+    height: 315px;
+    width: 33%;
+}
+
+.sd-thumbnail img {
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+    display: flex;
+}
+
+.sd-metadata {
+    width: calc(100% - 33%);
+}
+
+.data-box {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    column-gap: 8px;
+    margin-bottom: 6px;
+}
+
+.data-box.dp-title {
+    color: var(--black-color);
+    font-size: 13px;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.1rem;
+    margin-bottom: 10px;
+    column-gap: 0px;
+}
+
+label.dp-label {
+    color: var(--black-color);
+    font-size: 13px;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+}
+
+a.dp-title { color: var(--app-third-color); cursor: pointer; }
+a.dp-title:hover { color: var(--app-primary-color); transition: all 0.2s ease-in-out; }
+.dp-title {
+    color: var(--black-color);
+    font-size: 13px;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* === Tags === */
+.data-box.tags {
+    border-top: 2px solid #e7e7e7;
+    margin-bottom: 0px;
+    margin-top: 10px;
+    padding-top: 10px;
+}
+
+/* ================================ */
+/* ====== Viewdetails : End ====== */
+/* ================================ */
+
+/* ===========================================================*/
+/* ====================== CSS Media Querys ================== */
+/* ===========================================================*/
+@media only screen and (max-width: 970px) {
+
+    /* === Container , Swiper === */
+    section#dramacoolBody {
+        margin-top: 64px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    
+    /* === Main ==== */
+    main#homepage, main#watchpage, main#showdetails, 
+    main#castpage, main#news, main#dramacool {
+        width: 100%;
+    }
+
+    /* === Aside === */
+    aside#aside {
+        display: none;
+    }
+
+    /* ======================= */
+    /* ===== Watch Video ===== */
+    /* ======================= */
+    .vw-meta {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0px 0px 10px 0px;
+        border-bottom: 1px dashed #cfcfcf;
+    }
+
+    h1.vw-title {
+        padding-bottom: 10px;
+        border-bottom: 1px solid #cfcfcf;
+        width: 100%;
+    }
+
+    .submeta {
+        margin-top: 10px;
+    }
+
+    /* === Related Episode === */
+    span.time-uploaded {
+        display: none;
+    }
+
+    /* ======================= */
+    /* ==== Show Details ===== */
+    /* ======================= */
+    .sd-thumbnail {
+        width: 30%;
+    }
+
+    .sd-metadata {
+        width: calc(100% - 30%);
+    }
+
+}
+
+@media only screen and (max-width: 827px) {
+
+    /* === Most Popular === */
+    .mp-listing {
+        row-gap: 7px;
+    }
+
+    li.post-mp {
+        width: calc(50% - 12px) !important;
+    }
+
+    /* ======================= */
+    /* ==== Show Details ===== */
+    /* ======================= */
+    .details-container {
+        flex-direction: column;
+        row-gap: 10px;
+        column-gap: 0px;
+    }
+
+    .sd-thumbnail {
+        width: 100%;
+    }
+
+    .sd-thumbnail img {
+        object-fit: contain;
+    }
+
+    .sd-metadata {
+        width: 100%;
+    }
+    
+}
+
+@media only screen and (max-width: 740px) {
+
+    /* === Container , Swiper === */
+    #carousel {
+        display: none;
+    }
+    
+    /* === Main ==== */
+    .post-listing {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* ======================= */
+    /* ===== Watch Video ===== */
+    /* ======================= */
+    p.report,
+    p.light-click,
+    p.downloadLink {
+        display: none;
+    }
+
+    i.fas.fa-moon, 
+    i.fas.fa-lightbulb, 
+    i.fas.fa-download, 
+    i.fas.fa-flag {
+        padding:  0px 0px;
+    }
+
+    i.fas.fa-download, 
+    i.fas.fa-flag {
+        font-size: 14px;
+    }
+    
+    /* === Related Episode === */
+    .repi-title {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .repi-title h3 {
+        padding: 8px 10px 8px 0;
+    }
+}
+
+@media only screen and (max-width: 580px) {
+
+    /* === Most Popular === */
+    li.post-mp {
+        width: 100% !important;
+    }
+
+    /* ======================= */
+    /* ===== Watch Video ===== */
+    /* ======================= */
+    span.time-uploaded {
+        display: none;
+    }
+    
+}
+
+@media only screen and (max-width: 560px) {
+    
+    /* === Main === */
+    .post-listing {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* ======================= */
+    /* ===== Watch Video ===== */
+    /* ======================= */
+    a.perv-link p, a.next-link p {
+        display: none;
+    }
+
+    button.episode-previous,
+    button.episode-next {
+        padding: 4px 6px;
+    }
+
+    i.bx.bx-chevron-left, 
+    i.bx.bx-chevron-right {
+        font-size: 20px;
+    }
+    
+}
+
+@media only screen and (max-width: 368px) {
+    
+    /* === Label === */
+    .label-box {
+        flex-wrap: wrap;
+        row-gap: 5px;
+    }
+
+    /* === Thumbnail === */
+    img.rad-thumbnail, 
+    img.ram-thumbnail, 
+    img.kshow-thumbnail {
+        height: 145px;
+        transition: all 0.2s ease-in-out;
+    }
+
+}

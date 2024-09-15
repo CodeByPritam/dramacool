@@ -1,0 +1,337 @@
+/* ================================================================== */
+/* ==================== Auth : Login, Registration ================== */
+/* ================================================================== */
+section#login, 
+section#register {
+    height: 100vh;
+    position: relative;
+}
+
+#login-container, 
+#register-container {
+    max-width: 1140px;
+    margin: auto;
+    padding: 0px 14px;
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* === Alert Card === */
+.alert-card {
+    position: relative;
+    width: 360px;
+    box-shadow: 0px 6px 6px -6px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    padding: 18px 10px;
+    background: #ffffff;
+    border: 1px solid #f5f5f5;
+    border-left: 4px solid rgb(245, 20, 58);
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    max-width: 100%;
+}
+
+/* === Close Alert === */
+.close-alert {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+i.bx.bx-x {
+    font-size: 22px;
+    padding: 6px 6px;
+    color: #423d3d;
+}
+
+/* === Caution === */
+.caution {
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+}
+
+.alert-icon {
+    display: flex;
+    align-items: center;
+}
+
+
+i.bx.bxs-error-circle {
+    font-size: 20px;
+    color: rgb(245, 20, 58);
+}
+
+i.bx.bxs-alarm-exclamation {
+    font-size: 20px;
+    color: rgb(247, 204, 16);
+}
+
+i.bx.bxs-check-circle {
+    font-size: 20px;
+    color: green;
+}
+
+.alert-text {
+    font-family: 'Poppins';
+    font-size: 14px;
+    font-weight: 500;
+    width: 100%;
+}
+
+/* === Auth Card === */
+.login-card, 
+.register-card {
+    padding: 20px 20px;
+    background: #ffffff;
+    border: 1px solid #f5f5f5;
+    box-shadow: 0px 6px 6px -6px rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    width: 360px;
+    max-width: 100%;
+}
+
+/* === App Logo === */
+.app-logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 10px;
+    margin-bottom: 18px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #dbdbdb;
+}
+
+.app-logo img {
+    vertical-align: middle;
+    width: 34px;
+    border-radius: 10px;
+}
+
+.app-name {
+    display: flex;
+    align-items: center;
+    font-family: 'Karla';
+    font-size: 24px;
+    font-weight: 800;
+    color: #2e2d2d;
+    letter-spacing: -2px;
+}
+
+/* === Auth Text === */
+.login-texts, 
+.register-texts {
+    margin-bottom: 26px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2px;
+}
+
+h1.text-welcome {
+    font-family: 'Sora';
+    font-weight: 600;
+    letter-spacing: -0.5px;
+    font-size: 18px;
+}
+
+p.small-text {
+    font-family: 'Sora';
+    font-weight: 400;
+    letter-spacing: 0px;
+    font-size: 13px;
+}
+
+/* === Auth Form === */
+form.login-form,
+form.register-form {
+    display: flex;
+    flex-direction: column;
+    padding-top: 4px;
+}
+
+.group-field {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.group-field.second-input {
+    margin-top: 16px;
+}
+
+.group-field.evenodd-input {
+    margin-top: 16px;
+}
+
+input.login-manually, input.login-password,
+input.register-name, input.register-email, input.register-username,
+input.register-phone, input.register-password, input.confirm-password {
+    outline: none;
+    height: 46px;
+    border: 1px solid #a9a9a9;
+    padding: 0 18px;
+    border-radius: 6px;
+    font-family: 'Poppins';
+    font-weight: 500;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+input.login-manually, input.login-password {
+    padding: 0 52px 0 18px !important;
+}
+
+::placeholder {
+    font-family: 'Poppins';
+    font-weight: 500;
+    font-size: 14px;
+    color : rgba(0, 0, 0, 0.7);
+}
+
+.placeholder {
+    font-family: 'Sora';
+    font-size: 13px;
+    font-weight: 400;
+    position: absolute;
+    top: -10px;
+    left: 14px;
+    background: #ffffff;
+    color: rgba(0, 0, 0, 0.7);
+    padding: 1px 6px;
+    letter-spacing: 0.1px;
+}
+
+.icon-status,
+.view-password {
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
+    background: #dedede;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+i.bx.bxs-envelope {
+    font-size: 18px;
+    color: #2f2f2f;
+}
+
+i.bx.bx-low-vision,
+i.fa-regular.fa-eye {
+    font-size: 20px;
+    color: #2f2f2f;
+}
+
+/* === Auth Submit === */
+button.login-submit,
+button.register-submit {
+    margin-top: 14px;
+    outline: none;
+    height: 45px;
+    color: #ffffff;
+    border: none;
+    background: var(--app-third-color);
+    font-family: 'Poppins';
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.1px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+i.bx.bx-key {
+    font-size: 20px;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+/* === Auth Hover === */
+input.login-manually:focus, input.login-manually:hover,
+input.login-password:focus, input.login-password:hover {
+    border: 1px solid var(--app-third-color);
+    transition: all 0.2s ease-in-out;
+}
+
+input.login-manually:focus + .placeholder, input.login-manually:hover + .placeholder,
+input.login-password:focus + .placeholder, input.login-password:hover + .placeholder {
+    color: var(--app-third-color);
+    transition: all 0.2s ease-in-out;
+}
+
+input.register-name:focus, input.register-name:hover,
+input.register-email:focus, input.register-email:hover,
+input.register-username:focus, input.register-username:hover,
+input.register-phone:focus, input.register-phone:hover,
+input.register-password:focus, input.register-password:hover,
+input.confirm-password:focus, input.confirm-password:hover {
+    border: 1px solid var(--app-third-color);
+    transition: all 0.2s ease-in-out;
+}
+
+input.register-name:focus + .placeholder, input.register-name:hover + .placeholder,
+input.register-email:focus + .placeholder, input.register-email:hover + .placeholder,
+input.register-username:focus + .placeholder, input.register-username:hover + .placeholder,
+input.register-phone:focus + .placeholder, input.register-phone:hover + .placeholder,
+input.register-password:focus + .placeholder, input.register-password:hover + .placeholder,
+input.confirm-password:focus + .placeholder, input.confirm-password:hover + .placeholder {
+    color: var(--app-third-color);
+    transition: all 0.2s ease-in-out;
+}
+
+/* === Line === */
+.line-container {
+    display: flex;
+    flex-direction: row;
+    margin: 12px 0;
+    align-items: center;
+}
+
+.line {
+    position: relative;
+    content: '';
+    width: 50%;
+    height: 2px;
+    background: #dbdbdb;
+}
+
+.line-text {
+    font-family: 'Karla';
+    font-weight: 600;
+    font-size: 14px;
+    padding: 2px 10px;
+    color: #bdbdbd;
+}
+
+/* === Have An Account === */
+.haveAccount {
+    display: flex;
+    flex-direction: row;
+    column-gap: 4px;
+    margin-top: 8px;
+    margin-bottom: 4px;
+    align-items: center;
+    justify-content: center;
+    color: #776f6f;
+    flex-wrap: wrap;
+    font-family: 'Karla';
+    font-weight: 400;
+    letter-spacing: 0px;
+    font-size: 14px;
+}
+
+.haveAccount a {
+    color: var(--app-third-color);
+    text-decoration: none;
+    font-family: 'Karla';
+    font-weight: 500;
+    letter-spacing: 0px;
+    font-size: 14px;
+}

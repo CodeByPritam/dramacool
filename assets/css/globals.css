@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,300;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;600;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,200;1,300;1,400;1,600&display=swap');
+
+:root {
+	--app-body: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(228,242,242,1) 75%);
+	--app-primary-color: #23b7c5;
+    --app-secondary-color: #ffaf38;
+	--app-third-color: #207a9e;
+	--alphabetList-background: #C0C0C0;
+	--white-color: #ffffff ;
+	--black-color: #000000 ;
+}
+
+*,html,
+body {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+    background: var(--app-body);
+    background-repeat: no-repeat;
+    background-size: cover;
+	overflow-x: hidden;
+	scroll-behavior: smooth;
+}
+
+ol,ul,
+li {
+	list-style: none;
+}
+
+a, a:hover {
+	text-decoration: none;
+}
+
+button:focus, a:focus, input:focus,
+textarea:focus{
+	outline: none;
+}
+
+a, button{
+	-webkit-transition: 0.3s;
+	-o-transition: 0.3s;
+	transition: 0.3s;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+.container{
+	max-width: 970px;
+    margin: auto;
+}
+
+.prevent-copy{
+	-webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}

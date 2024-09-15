@@ -1,0 +1,406 @@
+/* ===== Header : Begin ===== */
+header#dramacoolHeader {
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    width: 100%;
+    animation: smoothScroll 0.5s forwards;
+}
+
+/* ================================= */
+/* === DramaCool : Alphabet List === */
+/* ================================= */
+#dramacool-alphabetList {
+    border-top: 1px solid var(--white-color);
+    background: var(--alphabetList-background);
+    display: flex;
+    justify-content: center;
+    font-size: 0;
+}
+
+li.alphabet {
+    display: inline-block;
+    width: calc(3.57% - 1px);
+    text-align: center;
+    border-right: 1px solid var(--white-color);
+    padding: 6px 0;
+    cursor: pointer;
+}
+
+li.alphabet:nth-child(1) {
+    border-left: 1px solid var(--white-color);
+}
+
+#dramacool-alphabetList li.alphabet a {
+    font-size: 12px;
+    font-weight: 600;
+    font-family: 'Karla';
+    color: var(--white-color);
+}
+
+li.alphabet:hover {
+    background: var(--app-secondary-color);
+    transition: all 0.2s ease-in-out;
+}
+
+/* ============================== */
+/* === DramaCool : Top Header === */
+/* ============================== */
+#dramacool-topHeader {
+    position: relative;
+    height: 73px;
+}
+
+/* == site Banner == */
+a.site-banner {
+    height: inherit;
+    display: block;
+    cursor: pointer;
+}
+
+img.banner-logo {
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+}
+
+/* == Top Search == */
+.topSearch {
+    position: absolute;
+    bottom: 16px;
+    right: 30px;
+}
+
+.topSearch form{
+    display: flex;
+    align-items: center;
+    height: 35px;
+}
+
+::placeholder {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    color: #373838;
+}
+
+input.input-search {
+    width: 190px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    color: #373838;
+    border: none;
+    outline: none;
+    height: inherit;
+    padding: 0 10px;
+    border-bottom-left-radius: 4px;
+    border-top-left-radius: 4px;
+}
+
+button.submit-search {
+    display: flex;
+    align-items: center;
+    height: inherit;
+    border: none;
+    outline: none;
+    background: var(--app-secondary-color);
+    padding: 0 10px;
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+i.bx.bx-search-alt {
+    font-size: 18px;
+    color: var(--white-color);
+    position: relative;
+    top: 1px;
+}
+
+/* ================================== */
+/* === DramaCool : Primary Header === */
+/* ================================== */
+#dramacool-primaryHeader {
+    background-color: var(--app-primary-color);
+    height: 45px;
+    display: flex;
+    overflow: hidden;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/* === Toggle, Mobile Logo, Search === */
+.toggle-menu, .toggle-search, .search-container,
+a.logoHeader-Mobile   {
+    display: none;
+}
+
+/* === Menu List === */
+ul.header-ul {
+    display: flex;
+    align-items: center;
+    height: inherit;
+}
+
+ul.header-ul li.header-li {
+    display: flex;
+    align-items: center;
+    height: inherit;
+    border-right: 1px solid var(--white-color);
+}
+
+.activetab {
+    background: var(--app-secondary-color);
+}
+
+ul.header-ul li.header-li:hover {
+    background: var(--app-secondary-color);
+    transition: all 0.2s ease-in-out;
+}
+
+li.header-li a {
+    height: inherit;
+    display: flex;
+    align-items: center;
+    padding: 0px 16px;
+    font-family: 'Karla';
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--white-color);
+    letter-spacing: 0.01px;
+}
+
+i.bx.bxs-home-alt-2 {
+    font-size: 16px;
+    padding-right: 4px;
+    position: relative;
+    bottom: 1px;
+}
+
+i.bx.bxs-user-account {
+    font-size: 16px;
+    padding-right: 4px;
+}
+
+/* ===== Header : End ===== */
+
+/* ===== Footer : Begin ===== */
+footer#dramacoolFooter {
+    margin-top: 10px;
+}
+
+.f-information {
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 10px;
+    background: var(--white-color);
+    border: 1px solid #e7e7e7;
+}
+
+/* === Menu List === */
+.footer-ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 18px;
+}
+
+.footer-li a {
+    color: var(--app-third-color);
+    font-family: 'Karla';
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.footer-li a:hover {
+    color: var(--app-secondary-color);
+    transition: all 0.2s ease-in-out;
+}
+
+/* === Copyright === */
+.copyright {
+    column-gap: 6px;
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    font-family: 'Karla';
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--black-color);
+}
+
+.copyright i.fas.fa-heart {
+    color: rgb(246, 24, 91);
+}
+
+/* ===== Footer : End ===== */
+
+/* ===================================== */
+/* ============ Media Querys =========== */
+/* ===================================== */
+@media only screen and (max-width: 970px) {
+
+    /* ================== */
+    /* ===== Header ===== */
+    /* ================== */
+    #dramacool-topHeader,
+    #dramacool-alphabetList {
+        display: none;
+    }
+
+    #dramacool-primaryHeader {
+        height: 54px;
+        justify-content: space-between;
+    }
+
+    /* === Menu === */
+    ul.header-ul {
+        display: flex !important;
+        flex-direction: column;
+        position: fixed;
+        top: 54px;
+        right: -100%;
+        height: 100vh;
+        width: 100%;
+        background: var(--black-color);
+        overflow-y: scroll;
+        transition: all 0.4s ease-in-out;
+    }
+
+    ul.header-ul li.header-li {
+        display: block;
+        margin: 0px 0px;
+        border-bottom: 1px solid var(--white-color);
+        border-right: none;
+        height: auto;
+        width: 100%;
+    }
+
+    ul.header-ul .header-li a {
+        color: var(--white-color);
+        padding: 15px 20px !important;
+        opacity: 1;
+        position: relative;
+    }
+
+    .activetab, ul.header-ul li.header-li:hover {
+        background: none !important;
+    }
+
+    /* === Toggle Menu === */
+    .toggle-menu{
+        height: inherit;
+        display: flex;
+        align-items: center;
+        background: transparent;
+        padding: 0 12px 0 12px;
+        border-right: 1px dashed var(--white-color);
+    }
+
+    i.bx.bx-menu-alt-left {
+        color: var(--white-color);
+        font-size: 30px;
+    }
+
+    i.bx.bx-x {
+        color: var(--white-color);
+        font-size: 30px;
+    }
+
+    /* === Mobile Logo === */
+    a.logoHeader-Mobile {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        height: inherit;
+        left: 68px;
+    }
+
+    img.smallscreen-logo {
+        height: 16px;
+    }
+    
+    /* === Search Toggle === */
+    .toggle-search {
+        height: inherit;
+        display: flex;
+        align-items: center;
+        padding: 0 16px 0 0;
+    }
+
+    i.bx.bx-search-alt-2 {
+        font-size: 24px;
+        color: var(--white-color);
+    }
+
+    /* === Search Container === */
+    .search-container {
+        display: none;
+        position: absolute;
+        top: 54px;
+        right: 0px;
+        background: #23b7c5;
+        height: 54px;
+        width: 100%;
+        border-top: 1px dashed var(--white-color);
+    }
+
+    .search-container form {
+        height: inherit;
+        display: flex;
+        align-items: center;
+        padding: 0 12px;
+    }
+
+    input.mobile-input {
+        width: 100%;
+        border: none;
+        outline: none;
+        height: 40px;
+        padding: 0 12px;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 13px;
+        font-weight: 500;
+        color: #373838;
+        border-top-left-radius: 4px;
+        border-bottom-left-radius: 4px;
+    }
+
+    button.mobile-submit {
+        height: 40px;
+        border: none;
+        outline: none;
+        padding: 0 18px;
+        color: var(--white-color);
+        background: var(--app-secondary-color);
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 4px;
+    }
+
+    i.fa-solid.fa-magnifying-glass {
+        font-size: 18px;
+        position: relative;
+        top: 1px;
+    }
+
+    i.fa-solid.fa-xmark {
+        font-size: 22px;
+        color: var(--white-color);
+    }
+
+}
+
+@media only screen and (max-width: 740px) {
+
+    /* === Footer === */
+    .f-information {
+        justify-content: center;
+    }
+
+    .footer-ul {
+        display: none;
+    }
+
+}

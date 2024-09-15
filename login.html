@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="language" content="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="robots" content="noindex, nofollow">
+
+    <!--- AppMeta : --->
+    <title>Login : DramaCool</title>
+
+    <!--- Favicon : --->
+    <link rel="icon" href="assets/favicon/favicon.ico" type="image/x-icon">
+
+    <!--- CSS : --->
+    <link rel="stylesheet" href="assets/css/globals.css">
+    <link rel="stylesheet" href="assets/css/auth.css">
+
+    <!--- FontCDN : --->
+    <script src="https://kit.fontawesome.com/c2ee87fe61.js"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+    <!--- Login : Begin --->
+    <section id="login">
+        <div id="login-container">
+
+            <!--- Alert Box --->
+            <div class="alert-card">
+
+                <!--- Close --->
+                <div class="close-alert">
+                    <i class='bx bx-x'></i>
+                </div>
+
+                <!--- Caution --->
+                <div class="caution">
+                    <i class='bx bxs-check-circle' ></i>
+                    <i class='bx bxs-error-circle'></i>
+                    <i class='bx bxs-alarm-exclamation'></i>
+                    <div class="alert-text">Login Failed.</div>
+                </div>
+
+            </div>
+
+            <!--- Login Card --->
+            <div class="login-card">
+
+                <!--- App Logo --->
+                <div class="app-logo">
+                    <img src="assets/images/site-logo.png" alt="site-logo.jpg">
+                    <div class="app-name">DramaC .</div>
+                </div>
+
+                <!--- Login Text --->
+                <div class="login-texts">
+                    <h1 class="text-welcome">Hello, Brah!</h1>
+                    <p class="small-text">Login to Continue..</p>
+                </div>
+
+                <!--- Input Fields --->
+                <form action="#" method="get" enctype="multipart/form-data" class="login-form">
+
+                    <!--- Manually --->
+                    <div class="group-field">
+                        <input type="text" class="login-manually">
+                        <label class="placeholder">Email / Username</label>
+                        <div class="icon-status"><i class='bx bxs-envelope'></i></div>
+                    </div>
+
+                    <!--- PassWord --->
+                    <div class="group-field second-input">
+                        <input type="password" class="login-password">
+                        <label class="placeholder">Password</label>
+                        <div class="view-password"><i class='bx bx-low-vision'></i></div>
+                    </div>
+
+                    <!--- Submit --->
+                    <button class="login-submit" type="submit">Login <i class='bx bx-key'></i></button>
+
+                </form>
+
+                <!--- Lines --->
+                <div class="line-container">
+                    <div class="line"></div>
+                    <div class="line-text">OR</div>
+                    <div class="line"></div>
+                </div>
+
+                <!--- Have Account --->
+                <div class="haveAccount">Don't Have An Account ? <a href="register.html">Register Here.</a></div>
+
+            </div>
+
+        </div>
+    </section>
+    <!--- Login : End --->
+
+</body>
+</html>
