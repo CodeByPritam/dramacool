@@ -28,18 +28,13 @@
 
             <!--- Alert Box --->
             <div class="alert-card">
-
-                <!--- Close --->
-                <div class="close-alert">
-                    <i class='bx bx-x'></i>
-                </div>
-
-                <!--- Caution --->
-                <div class="caution">
+                <div class="caution caution-success">
                     <i class='bx bxs-check-circle' ></i>
-                    <i class='bx bxs-error-circle'></i>
+                    <div class="alert-text">Login Success.</div>
+                </div>
+                <div class="caution caution-error">
                     <i class='bx bxs-alarm-exclamation'></i>
-                    <div class="alert-text">Login Failed.</div>
+                    <div class="alert-text">Something went wrong.</div>
                 </div>
             </div>
 
@@ -48,13 +43,12 @@
 
                 <!--- App Logo --->
                 <div class="app-logo">
-                    <img src="assets/images/site-logo.png" alt="site-logo.jpg">
-                    <div class="app-name">DramaC .</div>
+                    <img src="assets/images/site-logo.jpg" alt="site-logo.jpg">
                 </div>
 
                 <!--- Login Text --->
                 <div class="login-texts">
-                    <h1 class="text-welcome">Hello, Brah!</h1>
+                    <h1 class="text-welcome">Hello, Guest !!</h1>
                     <p class="small-text">Login to Continue..</p>
                 </div>
 
@@ -64,15 +58,17 @@
                     <!--- Manually --->
                     <div class="group-field">
                         <input type="text" class="login-manually">
-                        <label class="placeholder">Email / Username</label>
-                        <div class="icon-status"><i class='bx bxs-envelope'></i></div>
+                        <label class="placeholder">Username</label>
+                        <div class="manually-icon"><i class="fa-solid fa-at"></i></div>
+                        <div class="field-message"><i class="bx bxs-error-circle"></i>Username can't be empty.</div>
                     </div>
 
                     <!--- PassWord --->
                     <div class="group-field">
                         <input type="password" class="login-password">
                         <label class="placeholder">Password</label>
-                        <div class="view-password"><i class="fa-solid fa-eye-low-vision"></i></div>
+                        <div class="view-password"><i class="fa-solid fa-eye-slash"></i></div>
+                        <div class="field-message"><i class="bx bxs-error-circle"></i>Password can't be empty.</div>
                     </div>
 
                     <!--- Submit --->

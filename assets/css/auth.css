@@ -1,9 +1,10 @@
 /* ================================================================== */
 /* ==================== Auth : Login, Registration ================== */
 /* ================================================================== */
+body { background: #ffffff;}
 section#login, 
 section#register {
-    height: 100vh;
+    height: 100dvh;
     position: relative;
 }
 
@@ -21,66 +22,62 @@ section#register {
 
 /* === Alert Card === */
 .alert-card {
-    position: relative;
-    width: 360px;
-    box-shadow: 0px 6px 6px -6px rgba(0, 0, 0, 0.2);
-    border-radius: 4px;
-    padding: 18px 10px;
-    background: #ffffff;
-    border: 1px solid #f5f5f5;
-    border-left: 4px solid rgb(245, 20, 58);
-    margin-bottom: 16px;
-    display: flex;
-    align-items: center;
-    max-width: 100%;
-}
-
-/* === Close Alert === */
-.close-alert {
     position: absolute;
-    top: 0px;
-    right: 0px;
-}
-
-i.bx.bx-x {
-    font-size: 22px;
-    padding: 6px 6px;
-    color: #423d3d;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    row-gap: 10px;
 }
 
 /* === Caution === */
 .caution {
+    border-top: 1px solid #e4e4e7;
+    border-right: 1px solid #e4e4e7;
+    border-bottom: 1px solid #e4e4e7;
+    border-radius: 4px;
+    background: #ffffff;
+    padding: 14px 16px 14px 10px;
     display: flex;
     align-items: center;
-    column-gap: 8px;
+    column-gap: 6px;
+    box-shadow: 5px 0px 10px rgb(0 0 0 / 15%);
 }
 
-.alert-icon {
-    display: flex;
-    align-items: center;
+.caution-error {
+    border-left: 2px solid #f7cc10 !important;
 }
 
+.caution-success {
+    border-left: 2px solid green !important;
+}
 
 i.bx.bxs-error-circle {
-    font-size: 20px;
-    color: rgb(245, 20, 58);
+    font-size: 14px;
+    color: #ED4337;
 }
 
 i.bx.bxs-alarm-exclamation {
-    font-size: 20px;
+    font-size: 16px;
     color: rgb(247, 204, 16);
 }
 
 i.bx.bxs-check-circle {
-    font-size: 20px;
+    font-size: 16px;
     color: green;
 }
 
 .alert-text {
-    font-family: 'Poppins';
-    font-size: 14px;
-    font-weight: 500;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    font-family: 'Sora';
+    font-size: 13px;
+    font-weight: 400;
     width: 100%;
+    column-gap: 6px;
+    color: rgba(0, 0, 0, 0.8);
 }
 
 /* === Auth Card === */
@@ -88,11 +85,11 @@ i.bx.bxs-check-circle {
 .register-card {
     padding: 20px 20px;
     background: #ffffff;
-    border: 1px solid #f5f5f5;
-    box-shadow: 0px 6px 6px -6px rgba(0, 0, 0, 0.2);
-    border-radius: 6px;
+    border: 1px solid #e4e4e7;
+    border-radius: 8px;
     width: 360px;
     max-width: 100%;
+    box-shadow: 0px 0px 20px rgb(0 0 0 / 10%);
 }
 
 /* === App Logo === */
@@ -103,23 +100,12 @@ i.bx.bxs-check-circle {
     column-gap: 10px;
     margin-bottom: 18px;
     padding-bottom: 12px;
-    border-bottom: 2px solid #dbdbdb;
+    border-bottom: 2px solid #e4e4e7;
 }
 
 .app-logo img {
     vertical-align: middle;
-    width: 34px;
-    border-radius: 10px;
-}
-
-.app-name {
-    display: flex;
-    align-items: center;
-    font-family: 'Karla';
-    font-size: 24px;
-    font-weight: 800;
-    color: #2e2d2d;
-    letter-spacing: -2px;
+    width: 100%;
 }
 
 /* === Auth Text === */
@@ -151,45 +137,61 @@ form.register-form {
     display: flex;
     flex-direction: column;
     padding-top: 4px;
+    row-gap: 18px;
 }
 
+/* === Groups & Split === */
 .group-field {
     display: flex;
     flex-direction: column;
     position: relative;
+    width: 100%;
 }
 
-.group-field.second-input {
-    margin-top: 16px;
+.split-class {
+    display: flex;
+    align-items: center;
+    column-gap: 18px;
+    width: 100%;
 }
 
-.group-field.evenodd-input {
-    margin-top: 16px;
-}
-
+/* === Inputs === */
+input.db-host, input.db-username, input.db-password, input.db-name, 
 input.login-manually, input.login-password,
 input.register-name, input.register-email, input.register-username,
-input.register-phone, input.register-password, input.confirm-password {
+input.register-phonenumber, input.register-password, input.confirm-password {
     outline: none;
     height: 46px;
-    border: 1px solid #a9a9a9;
+    border: 1px solid #c5c5c5;
     padding: 0 18px;
-    border-radius: 6px;
-    font-family: 'Poppins';
-    font-weight: 500;
+    border-radius: 8px;
+    font-family: 'Sora', serif;
+    font-weight: 400;
     font-size: 14px;
     color: rgba(0, 0, 0, 0.7);
+    letter-spacing: -0.1px;
 }
 
 input.login-manually, input.login-password {
-    padding: 0 52px 0 18px !important;
+    padding: 0 58px 0 18px !important;
+}
+
+input.is-invalid {
+    border: 1px solid #ED4337 !important;
+    transition: all 0.8ms ease-in-out;
+}
+
+i.is-invalid,
+label.placeholder.is-invalid {
+    color: #ED4337 !important;
+    transition: all 0.8ms ease-in-out;
 }
 
 ::placeholder {
     font-family: 'Poppins';
     font-weight: 500;
     font-size: 14px;
-    color : rgba(0, 0, 0, 0.7);
+    color : rgba(0, 0, 0, 0.6);
 }
 
 .placeholder {
@@ -200,50 +202,78 @@ input.login-manually, input.login-password {
     top: -10px;
     left: 14px;
     background: #ffffff;
-    color: rgba(0, 0, 0, 0.7);
+    color: rgba(0, 0, 0, 0.6);
     padding: 1px 6px;
     letter-spacing: 0.1px;
 }
 
-.icon-status,
+.manually-icon,
 .view-password {
     position: absolute;
-    top: 3px;
+    top: 8px;
     right: 3px;
-    height: 40px;
+    height: 30px;
     display: flex;
     align-items: center;
     padding: 0 12px;
-    background: #dedede;
+    border-left: 1px solid #c5c5c5;
     border-top-right-radius: 4px;
     border-bottom-right-radius: 4px;
 }
 
-i.bx.bxs-envelope {
-    font-size: 18px;
-    color: #2f2f2f;
+i.fa-solid.fa-at {
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.4);
 }
 
-i.bx.bx-low-vision,
+i.fa-solid.fa-eye-slash,
 i.fa-regular.fa-eye {
-    font-size: 20px;
-    color: #2f2f2f;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.4);
+}
+
+/* === Selects === */
+select.register-role,
+select.register-priority,
+select.register-status{
+    outline: none;
+    height: 46px;
+    border: 1px solid #c5c5c5;
+    padding: 0 18px;
+    border-radius: 8px;
+    font-family: 'Sora', serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.7);
+    letter-spacing: -0.1px;
+}
+
+/* === Input Alert === */
+.field-message {
+    display: none; /* === Flex ===*/
+    align-items: center;
+    column-gap: 4px;
+    font-family: 'Sora';
+    font-size: 12px;
+    font-weight: 400;
+    margin-top: 4px;
+    color: #ED4337;
 }
 
 /* === Auth Submit === */
 button.login-submit,
 button.register-submit {
-    margin-top: 14px;
     outline: none;
-    height: 45px;
+    height: 44px;
+    padding: 0 0 4px 0;
     color: #ffffff;
     border: none;
-    background: var(--app-third-color);
-    font-family: 'Poppins';
-    font-size: 14px;
-    font-weight: 600;
+    background: linear-gradient(163deg, #0381a5, #24bfc2);
+    font-family: 'Sora';
+    font-size: 13px;
+    font-weight: 500;
     letter-spacing: 0.1px;
-    border-radius: 6px;
+    border-radius: 8px;
     cursor: pointer;
 }
 
@@ -253,35 +283,59 @@ i.bx.bx-key {
     font-weight: 500;
 }
 
-/* === Auth Hover === */
-input.login-manually:focus, input.login-manually:hover,
-input.login-password:focus, input.login-password:hover {
+/* === DB Setup Hover === */
+input.db-host:focus,
+input.db-username:focus,
+input.db-password:focus,
+input.db-name:focus {
     border: 1px solid var(--app-third-color);
     transition: all 0.2s ease-in-out;
 }
 
-input.login-manually:focus + .placeholder, input.login-manually:hover + .placeholder,
-input.login-password:focus + .placeholder, input.login-password:hover + .placeholder {
+input.db-host:focus + .placeholder,
+input.db-username:focus + .placeholder,
+input.db-password:focus + .placeholder,
+input.db-name:focus + .placeholder {
     color: var(--app-third-color);
     transition: all 0.2s ease-in-out;
 }
 
-input.register-name:focus, input.register-name:hover,
-input.register-email:focus, input.register-email:hover,
-input.register-username:focus, input.register-username:hover,
-input.register-phone:focus, input.register-phone:hover,
-input.register-password:focus, input.register-password:hover,
-input.confirm-password:focus, input.confirm-password:hover {
+/* === Auth : Login Hover === */
+input.login-manually:focus,
+input.login-password:focus {
     border: 1px solid var(--app-third-color);
     transition: all 0.2s ease-in-out;
 }
 
-input.register-name:focus + .placeholder, input.register-name:hover + .placeholder,
-input.register-email:focus + .placeholder, input.register-email:hover + .placeholder,
-input.register-username:focus + .placeholder, input.register-username:hover + .placeholder,
-input.register-phone:focus + .placeholder, input.register-phone:hover + .placeholder,
-input.register-password:focus + .placeholder, input.register-password:hover + .placeholder,
-input.confirm-password:focus + .placeholder, input.confirm-password:hover + .placeholder {
+input.login-manually:focus + .placeholder,
+input.login-password:focus + .placeholder {
+    color: var(--app-third-color);
+    transition: all 0.2s ease-in-out;
+}
+
+/* === Auth : Registration Hover === */
+input.register-name:focus,
+input.register-email:focus,
+input.register-username:focus,
+input.register-phonenumber:focus,
+select.register-role:focus,
+select.register-priority:focus,
+select.register-status:focus,
+input.register-password:focus,
+input.confirm-password:focus {
+    border: 1px solid var(--app-third-color);
+    transition: all 0.2s ease-in-out;
+}
+
+input.register-name:focus + .placeholder,
+input.register-email:focus + .placeholder,
+input.register-username:focus + .placeholder,
+input.register-phonenumber:focus + .placeholder,
+select.register-role:focus + .placeholder,
+select.register-priority:focus + .placeholder,
+select.register-status:focus + .placeholder,
+input.register-password:focus + .placeholder,
+input.confirm-password:focus + .placeholder{
     color: var(--app-third-color);
     transition: all 0.2s ease-in-out;
 }
@@ -290,7 +344,7 @@ input.confirm-password:focus + .placeholder, input.confirm-password:hover + .pla
 .line-container {
     display: flex;
     flex-direction: row;
-    margin: 12px 0;
+    margin: 12px 0 10px 0;
     align-items: center;
 }
 
@@ -307,7 +361,7 @@ input.confirm-password:focus + .placeholder, input.confirm-password:hover + .pla
     font-weight: 600;
     font-size: 14px;
     padding: 2px 10px;
-    color: #bdbdbd;
+    color: rgba(0, 0, 0, 0.6);
 }
 
 /* === Have An Account === */
@@ -315,23 +369,20 @@ input.confirm-password:focus + .placeholder, input.confirm-password:hover + .pla
     display: flex;
     flex-direction: row;
     column-gap: 4px;
-    margin-top: 8px;
-    margin-bottom: 4px;
+    margin-bottom: 2px;
     align-items: center;
     justify-content: center;
-    color: #776f6f;
+    color: rgba(0, 0, 0, 0.6);
     flex-wrap: wrap;
-    font-family: 'Karla';
+    font-family: 'Sora';
     font-weight: 400;
-    letter-spacing: 0px;
-    font-size: 14px;
+    font-size: 13px;
 }
 
 .haveAccount a {
     color: var(--app-third-color);
     text-decoration: none;
-    font-family: 'Karla';
-    font-weight: 500;
-    letter-spacing: 0px;
-    font-size: 14px;
+    font-family: 'Sora';
+    font-weight: 400;
+    font-size: 13px;
 }

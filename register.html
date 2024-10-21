@@ -28,20 +28,14 @@
 
             <!--- Alert Box --->
             <div class="alert-card">
-
-                <!--- Close --->
-                <div class="close-alert">
-                    <i class='bx bx-x'></i>
+                <div class="caution caution-success">
+                    <i class="bx bxs-check-circle"></i>
+                    <div class="alert-text">Registration Success.</div>
                 </div>
-
-                <!--- Caution --->
-                <div class="caution">
-                    <i class='bx bxs-check-circle' ></i>
-                    <i class='bx bxs-error-circle'></i>
-                    <i class='bx bxs-alarm-exclamation'></i>
-                    <div class="alert-text">Registration Failed.</div>
+                <div class="caution caution-error">
+                    <i class="bx bxs-alarm-exclamation"></i>
+                    <div class="alert-text">Something went wrong.</div>
                 </div>
-
             </div>
 
             <!--- Register Card --->
@@ -49,8 +43,7 @@
 
                 <!--- App Logo --->
                 <div class="app-logo">
-                    <img src="assets/images/site-logo.png" alt="site-logo.jpg">
-                    <div class="app-name">Reg : DramaC .</div>
+                    <img src="assets/images/site-logo.jpg" alt="site-logo.jpg">
                 </div>
 
                 <!--- Input Fields --->
@@ -60,46 +53,76 @@
                     <div class="group-field">
                         <input type="text" class="register-name">
                         <label class="placeholder">Name</label>
+                        <div class="field-message"><i class="bx bxs-error-circle"></i>Name can't be empty.</div>
                     </div>
 
                     <!--- Email --->
-                    <div class="group-field evenodd-input">
+                    <div class="group-field">
                         <input type="text" class="register-email">
                         <label class="placeholder">Email</label>
+                        <div class="field-message"><i class="bx bxs-error-circle"></i>Email can't be empty.</div>
                     </div>
 
                     <!--- Username --->
-                    <div class="group-field evenodd-input">
+                    <div class="group-field">
                         <input type="text" class="register-username">
                         <label class="placeholder">Username</label>
+                        <div class="field-message"><i class="bx bxs-error-circle"></i>Username can't be empty.</div>
+                    </div>
+
+                    <!--- Phone Number --->
+                    <div class="group-field">
+                        <input type="text" class="register-phonenumber">
+                        <label class="placeholder">Phone Number</label>
+                        <div class="field-message"><i class="bx bxs-error-circle"></i>Number can't be empty.</div>
+                    </div>
+
+                    <!--- Role & Priority--->
+                    <div class="split-class" style="display: none;">
+                        
+                        <!--- Role --->
+                        <div class="group-field">
+                            <select type="text" class="register-role">
+                                <option value="">--Select--</option>
+                                <option value="Admin">Admin</option>
+                                <option value="Modarator">Modarator</option>
+                                <option value="User">User</option>
+                            </select>
+                            <label class="placeholder">Select Role</label>
+                            <div class="field-message"><i class="bx bxs-error-circle"></i>Select Role.</div>
+                        </div>
+
+                        <!--- Status --->
+                        <div class="group-field">
+                            <select type="text" class="register-status">
+                                <option value="">--Select--</option>
+                                <option value="Active">Active</option>
+                                <option value="Inactive">Inactive</option>
+                            </select>
+                            <label class="placeholder">Status</label>
+                            <div class="field-message"><i class="bx bxs-error-circle"></i>Select Status.</div>
+                        </div>
+
                     </div>
 
                     <!--- PassWord --->
-                    <div class="group-field evenodd-input">
+                    <div class="group-field">
                         <input type="password" class="register-password">
                         <label class="placeholder">Password</label>
+                        <div class="field-message"><i class="bx bxs-error-circle"></i>Password can't be lessthen 6 character long.</div>
                     </div>
 
                     <!--- Confirm PassWord --->
-                    <div class="group-field evenodd-input">
+                    <div class="group-field">
                         <input type="text" class="confirm-password">
                         <label class="placeholder">Confirm Password</label>
+                        <div class="field-message"><i class="bx bxs-error-circle"></i>Confirm Password should match with password.</div>
                     </div>
 
                     <!--- Submit --->
                     <button class="register-submit" type="submit">Register <i class='bx bx-key'></i></button>
 
                 </form>
-
-                <!--- Lines --->
-                <div class="line-container">
-                    <div class="line"></div>
-                    <div class="line-text">OR</div>
-                    <div class="line"></div>
-                </div>
-
-                <!--- Have Account --->
-                <div class="haveAccount">Already Have An Account ? <a href="login.html">Login Here.</a></div>
 
             </div>
 
