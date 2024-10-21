@@ -45,7 +45,8 @@ span.error-text {
     margin-top: 20px;
 }
 
-a.home-link {
+a.home-link,
+a.login-link{
     padding: 12px 30px;
     background: linear-gradient(163deg, #0381a5, #24bfc2);
     color: var(--white-color);
