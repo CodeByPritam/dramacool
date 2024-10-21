@@ -3,13 +3,15 @@
 /* ================================================================== */
 body { background: #ffffff;}
 section#login, 
-section#register {
+section#register,
+section#setupENV {
     height: 100dvh;
     position: relative;
 }
 
 #login-container, 
-#register-container {
+#register-container,
+#setupENV-container {
     max-width: 1140px;
     margin: auto;
     padding: 0px 14px;
@@ -46,11 +48,11 @@ section#register {
 }
 
 .caution-error {
-    border-left: 2px solid #f7cc10 !important;
+    border-left: 3px solid #f7cc10 !important;
 }
 
 .caution-success {
-    border-left: 2px solid green !important;
+    border-left: 3px solid green !important;
 }
 
 i.bx.bxs-error-circle {
@@ -74,7 +76,7 @@ i.bx.bxs-check-circle {
     flex-direction: row;
     font-family: 'Sora';
     font-size: 13px;
-    font-weight: 400;
+    font-weight: 500;
     width: 100%;
     column-gap: 6px;
     color: rgba(0, 0, 0, 0.8);
@@ -82,7 +84,8 @@ i.bx.bxs-check-circle {
 
 /* === Auth Card === */
 .login-card, 
-.register-card {
+.register-card,
+.setupENV-card {
     padding: 20px 20px;
     background: #ffffff;
     border: 1px solid #e4e4e7;
@@ -133,7 +136,8 @@ p.small-text {
 
 /* === Auth Form === */
 form.login-form,
-form.register-form {
+form.register-form,
+form.setupENV-form {
     display: flex;
     flex-direction: column;
     padding-top: 4px;
@@ -262,7 +266,8 @@ select.register-status{
 
 /* === Auth Submit === */
 button.login-submit,
-button.register-submit {
+button.register-submit,
+button.setupENV-submit {
     outline: none;
     height: 44px;
     padding: 0 0 4px 0;

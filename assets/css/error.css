@@ -1,6 +1,7 @@
 /* ================= */
 /* ===== Error ===== */
 /* ================= */
+body { background: #ffffff;}
 #errorSection {
     overflow-y: hidden;
 }
@@ -32,7 +33,8 @@ img.error-image {
 span.error-text {
     font-family: 'Karla';
     font-size: 18px;
-    font-weight: 600;
+    font-weight: 500;
+    font-style: italic;
 }
 
 /* ===== Error Button ===== */
@@ -45,7 +47,7 @@ span.error-text {
 
 a.home-link {
     padding: 12px 30px;
-    background: var(--app-third-color);
+    background: linear-gradient(163deg, #0381a5, #24bfc2);
     color: var(--white-color);
     border-radius: 4px;
     font-size: 14px;

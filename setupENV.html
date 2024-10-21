@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="language" content="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="robots" content="noindex, nofollow">
+
+    <!--- AppMeta : --->
+    <title>Application Setup : DramaCool</title>
+
+    <!--- Favicon : --->
+    <link rel="icon" href="assets/favicon/favicon.ico" type="image/x-icon">
+
+    <!--- CSS : --->
+    <link rel="stylesheet" href="assets/css/globals.css">
+    <link rel="stylesheet" href="assets/css/auth.css">
+
+    <!--- FontCDN : --->
+    <script src="https://kit.fontawesome.com/c2ee87fe61.js"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+    <!--- Setup : Begin --->
+    <section id="setupENV">
+        <div id="setupENV-container">
+
+            <!--- Alert Box --->
+            <div class="alert-card">
+                <div class="caution caution-success">
+                    <i class="bx bxs-check-circle"></i>
+                    <div class="alert-text">ENV Setup Complete.</div>
+                </div>
+                <div class="caution caution-error">
+                    <i class="bx bxs-alarm-exclamation"></i>
+                    <div class="alert-text">Something went wrong.</div>
+                </div>
+            </div>
+
+            <!--- Setup Card --->
+            <div class="setupENV-card">
+                <form action="#" method="get" enctype="multipart/form-data" class="setupENV-form">
+
+                    <!--- DB Host --->
+                    <div class="group-field">
+                        <input type="text" class="db-host">
+                        <label class="placeholder">DB Host</label>
+                        <div class="field-message"><i class="bx bxs-error-circle"></i>Host can't be empty.</div>
+                    </div>
+
+                    <!--- Db Username --->
+                    <div class="group-field">
+                        <input type="text" class="db-username">
+                        <label class="placeholder">DB Username</label>
+                        <div class="field-message"><i class="bx bxs-error-circle"></i>DB Username can't be empty.</div>
+                    </div>
+
+                    <!--- Db Password --->
+                    <div class="group-field">
+                        <input type="text" class="db-password">
+                        <label class="placeholder">DB Password</label>
+                        <div class="field-message"><i class="bx bxs-error-circle"></i>DB Password can't be empty.</div>
+                    </div>
+
+                    <!--- DB Name --->
+                    <div class="group-field">
+                        <input type="text" class="db-name">
+                        <label class="placeholder">DB Name</label>
+                        <div class="field-message"><i class="bx bxs-error-circle"></i>DB Name can't be empty.</div>
+                    </div>
+
+                    <!--- Submit --->
+                    <button class="setupENV-submit" type="submit">Setup ENV <i class='bx bx-key'></i></button>
+
+                </form>
+            </div>
+
+        </div>
+    </section>
+    <!--- Setup : End --->
+
+</body>
+</html>
